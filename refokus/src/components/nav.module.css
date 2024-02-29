@@ -1,0 +1,116 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid white; */
+    width: 50%;
+    position: fixed;
+    /* margin-right: 150px; */
+}
+
+nav {
+    justify-content: space-between;
+    padding: 30px 25px 20px;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    border-bottom: 1px solid rgba(113, 113, 113, 0.457);
+    background: transparent;
+    transition: background-color 0.5s ease; /* Add transition for background-color */
+    /* background-color: black; */
+    display: flex;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.active::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 8px;
+    padding-left: 0px;
+    background-color: #00FF19;
+    box-shadow: 0 0 0.25em #00FF19;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 543px;
+}
+.workactive::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 8px;
+    padding-left: 0px;
+    background-color: #00FF19;
+    box-shadow: 0 0 0.25em #00FF19;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 419px;
+}
+.careeractive::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 8px;
+    padding-left: 0px;
+    background-color: #00FF19;
+    box-shadow: 0 0 0.25em #00FF19;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 302px;
+}
+.newsactive::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 8px;
+    padding-left: 0px;
+    background-color: #00FF19;
+    box-shadow: 0 0 0.25em #00FF19;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 85px;
+}
+
+.projectBtn {
+    margin-right: 30px;
+    border: none;
+    width: 164px;
+    border-radius: 25px;
+    padding: 8px 10px;
+    background-color: white;
+    color: black;
+    font-size: .95em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-left: 1224px;
+    justify-content: space-around;
+    /* font-weight: 600; */
+}
+
+.arrow {
+    margin-top: 5px;
+}
+
+.scrolled{
+    background-color: #000;
+}
