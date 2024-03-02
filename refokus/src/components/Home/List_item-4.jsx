@@ -6,30 +6,30 @@ export default function list_item_1() {
       <div className={style.container_list_item}>
         <div className={style.portfolio}
           style={{
-            backgroundImage:'url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6fe638241ed462f29f87_refokus-logo.png)',
-            backgroundColor:'hsla(232.30769230769232, 23.93%, 31.96%, 1.00)'
+            backgroundImage:'url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/63aed9f09c26951effaa9c27_rainfall.svg)',
+            backgroundColor:'hsla(237.27272727272725, 86.27%, 60.00%, 1.00)'
           }}
         >
           <div className={style.portfolio_flex}>
             <div className={style.flex_col_left}>
               <div className={style.card}>
-              <img src="https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6ec7666ac6009cfcb7db_11.jpg" loading="lazy" alt="" sizes="(max-width: 991px) 100vw, 400px" srcset="https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6ec7666ac6009cfcb7db_11-p-500.jpg 500w, https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6ec7666ac6009cfcb7db_11.jpg 800w" class="image"/>
+              <img src="https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cc2f1484100f8f5bcf07e5_9.jpg" loading="lazy" alt="" sizes="(max-width: 991px) 100vw, 400px" srcSet="https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cc2f1484100f8f5bcf07e5_9-p-500.jpg 500w, https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cc2f1484100f8f5bcf07e5_9.jpg 800w" className="image"/>
               </div>
               <div className={style.card2}>
-            <img style={{width:"638px"}} src="https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6ecc885579ba1b4ffc97_10.jpg" loading="eager" alt="" sizes="(max-width: 479px) 90vw, (max-width: 991px) 92vw, 70vw" srcset="https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6ecc885579ba1b4ffc97_10-p-500.jpg 500w, https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6ecc885579ba1b4ffc97_10-p-800.jpg 800w, https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6ecc885579ba1b4ffc97_10-p-1080.jpg 1080w, https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cd6ecc885579ba1b4ffc97_10.jpg 1320w" class="image"/>
+              <img style={{width:'679.99px'}} src="https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cc2f1683a983fb66bd96c4_8.jpg" loading="eager" alt="" sizes="(max-width: 479px) 90vw, (max-width: 991px) 92vw, 70vw" srcSet="https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cc2f1683a983fb66bd96c4_8-p-500.jpg 500w, https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cc2f1683a983fb66bd96c4_8-p-800.jpg 800w, https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cc2f1683a983fb66bd96c4_8-p-1080.jpg 1080w, https://assets-global.website-files.com/6334198f239547f2fccd84c1/64cc2f1683a983fb66bd96c4_8.jpg 1320w" className="image"/>
               </div>
             </div>
             <div className={style.flex_col_right}>
               <div className={style.porfolio_card}>
                 <div className={style.video_embed}>
                   <video preload='none' playsInline muted autoPlay loop width={"100%"} style={{ borderRadius: '16px' }}>
-                    <source src='https://cdn.refokus.com/website/TTR/TTR%20project%20video%204_3_H.264.webm' />
+                    <source src='https://cdn.refokus.com/website/2022/videos/rainfall.webm' />
                   </video>
                 </div>
               </div>
               <div className={style.portfolio_text}>
                 <p className={style.title}>
-                We've created an interactive site using generative AI to allow users to engage with our thinking about Ai, industry trends and design.                </p>
+                We crafted a website for Rainfall Ventures, developing prototypes and custom code that ultimately allows their team to update content regularly and with ease.</p>
                 <div className={style.btn_visit}>
                   <div>
                     <a href="https://www.arqitel.com/" target="_blank" className={style.c_button_m}>

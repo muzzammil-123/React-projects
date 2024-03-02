@@ -14,3 +14,28 @@ body {
     background-color: black;
     overflow-x: hidden;
 }
+
+#marquee {
+    -webkit-animation: marquee 20s linear infinite;
+    -moz-animation: marquee 20s linear infinite;
+    -ms-animation: marquee 20s linear infinite;
+    -o-animation: marquee 20s linear infinite;
+    animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+    0% {
+        -ms-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+    100% {
+        -ms-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    
+}

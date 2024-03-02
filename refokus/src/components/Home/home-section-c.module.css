@@ -1,0 +1,65 @@
+.logo_slider_container{
+    margin-top: 8em;
+    position: relative;
+    margin-bottom: 8em;
+}
+
+.c_logos_wrapper.cc_top {
+    border-bottom-style: none;
+}
+
+.c_logos_wrapper {
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3e3e46;
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+.c_logos_group {
+    flex: none;
+    display: flex;
+}
+
+.c_logos {
+    min-width: 20em;
+    border-right: 1px solid #3e3e46;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2.5em;
+    display: flex;
+}
+
+.c_logos.cc_text {
+    min-width: auto;
+    padding: 1.5rem 2.5rem;
+}
+
+.c_services_marquee_text {
+    font-variation-settings: "wght" 500;
+    text-align: center;
+    letter-spacing: -.01em;
+    text-transform: capitalize;
+    font-size: 1.75em;
+    font-weight: 400;
+    line-height: 1.07;
+    color: white;
+}
+
+.c_logos_image {
+    max-width: 70%;
+    object-fit: contain;
+}
+
+.c_text_7 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    font-size: 1.25em;
+    line-height: 1.3;
+    font-variation-settings: "wght" 500;
+}
+
