@@ -1,0 +1,32 @@
+
+
+.container{
+    color: black;
+    padding: 2em;
+}
+
+.par{
+    /* border: 1px solid; */
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    color: black;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: .5em 1.2em;
+    border-radius: 50px;
+    /* height: 20px; */
+    border: 1px solid gray;
+
+}
+
+
+
+.btn:focus{
+    background-color: black;
+    color: white;
+}

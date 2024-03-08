@@ -1,0 +1,55 @@
+.container {
+    padding-top: 12em;
+    padding-bottom: 10em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slider_container {
+    display: flex;
+    align-items: center;
+}
+
+.child {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 36s linear infinite;
+
+}
+.child2 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 36s linear infinite reverse;
+
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.c_logo {
+    width: auto;
+    max-height: none;
+    max-width: 9em;
+    flex: none;
+    margin-right: 7em;
+}

@@ -11,22 +11,10 @@ import Routing from './utils/Routing'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 export default function App() {
-
-  let [showHome, setShowHome] = useState(true)
-
-  useEffect(() => {
-    let timer = setTimeout(() => {
-      setShowHome(false)
-    }, 2000);
-  
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [])
   
   return (
     <>
-    <Store.Provider value={{Route, Routes, useLocation, Link, Home, Work, Career, News, showHome}}>
+    <Store.Provider value={{Route, Routes, useLocation, Link, Home, Work, Career, News}}>
     <Nav/>
    <Routing/>
     </Store.Provider>

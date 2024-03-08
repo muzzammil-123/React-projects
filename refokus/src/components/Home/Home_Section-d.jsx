@@ -9,7 +9,7 @@ export default function Home_Sectiond() {
                         Forward <br />  –Thinking
                     </div>
                     <div className={style.c_para}>
-                        A fully remote team composed of bright, diverse and caring individuals - all focused on building the next generation of world-class brands and websites.
+                        A fully remote team composed of bright, diverse and caring individuals - all focused on building the next generation of world-className brands and websites.
                     </div>
                 </div>
                 <div className={style.c_flex_right}>

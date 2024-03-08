@@ -1,0 +1,39 @@
+.container{
+    padding: 0;
+}
+
+.wrapper{
+    width: 100%;
+    border: 1px solid #3e3e46;
+    display: flex;
+    overflow: hidden;
+}
+
+.logo_group{
+    flex: none;
+    display: flex;
+}
+
+.c_logos{
+    min-width: 20em;
+    border-right:1px solid #3e3e46;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2.5em;
+    display: flex;
+}
+
+.c_image{
+    max-width: 70%;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.c_title{
+    color: white;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.25em;
+    line-height: 1.3;
+}

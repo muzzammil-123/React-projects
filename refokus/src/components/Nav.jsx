@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import style from './nav.module.css';
 import store from '../sore/Store';
 
 export default function Nav() {
     const { pathname } = useLocation();
+    let location = useLocation();
     const { Link: CustomLink } = useContext(store);
     const [scrolled, setScrolled] = useState(false);
 
@@ -22,17 +23,17 @@ export default function Nav() {
     }, []);
 
     return (
-        <nav className={scrolled ? style.scrolled : ''}>
+        <nav className={`${pathname === '/career' ? style.unScrolled : scrolled ? style.scrolled : ""}`}>
             <div className={style.nav}>
-                <img src="https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63349803431f1562dccf1802_refokus%20logo.svg" alt="" />
-                <CustomLink className={`${style.link} ${pathname === '/' ? style.active : ''}`} to="/">Home</CustomLink>
-                <CustomLink className={`${style.link} ${pathname === '/work' ? style.workactive : ''}`} to="/work">Work</CustomLink>
-                <CustomLink className={`${style.link} ${pathname === '/career' ? style.careeractive : ''}`} to="/career">Careers</CustomLink>
-                <div className={style.link}>|</div>
-                <CustomLink className={`${style.link} ${pathname === '/news' ? style.newsactive : ''}`} to="/news">News</CustomLink>
+                <img className={`${pathname === '/career' ? style.blackImg : ""}`} src="https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63349803431f1562dccf1802_refokus%20logo.svg"  alt="" />
+                <CustomLink className={`${style.link} ${pathname === '/' ? style.active : ''} ${pathname === '/career' ? style.navBlack : ''}`} to="/">Home</CustomLink>
+                <CustomLink className={`${style.link}  ${pathname === '/work' ? style.workactive : ''} ${pathname === '/career' ? style.navBlack : ''}`} to="/work">Work</CustomLink>
+                <CustomLink className={`${style.link} ${pathname === '/career' ? style.careeractive : ''} ${pathname === '/career' ? style.navBlack : ''}`} to="/career">Careers</CustomLink>
+                <div className={`${style.link} ${pathname === '/career' ? style.navBlack : ''}`}>|</div>
+                <CustomLink className={`${style.link} ${pathname === '/news' ? style.newsactive : ''} ${pathname === '/career' ? style.navBlack : ''}`} to="/news">News</CustomLink>
             </div>
             <div>
-                <button className={style.projectBtn}>
+                <button className={`${style.projectBtn} ${pathname === '/career' ? style.projectBtnBlack : ''}`}>
                     <div>Start a Project</div>
                     <div>
                         <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">

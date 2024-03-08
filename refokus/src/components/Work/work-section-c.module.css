@@ -1,0 +1,159 @@
+.container {
+    padding-top: 8em;
+    /* padding-bottom: 8em; */
+}
+
+.relative {
+    position: relative;
+}
+
+.wrapper {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 258px;
+    padding: 8em 3em;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+.bg{
+    transition: transform 0.5s ease;
+    background-image: url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/650c621a3aa0ee3ae147d692_arqitel-bg-p-2000.webp);
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg2{
+    transition: transform 0.5s ease;
+    background-image: url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/65b41319bda140bccae204ae_bg%202.png);
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg3{
+    transition: transform 0.5s ease;
+    background-image: url('https://assets-global.website-files.com/6334198f239547f2fccd84c1/64b754980b23ab2f2f2ff9e2_Work%20Background%20(1)-p-2000.jpg');
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg4{
+    transition: transform 0.5s ease;
+    background-color: #2dcb76;
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg5{
+    transition: transform 0.5s ease;
+    background-image: url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/6450586e80fac7eb1655014f_yir2022%E2%80%93bg-p-2000.png);
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg7{
+    transition: transform 0.5s ease;
+    background-image: url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/635299ec9a478d08095a0122_Rainfall%20bg-p-1600.png);
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg8{
+    transition: transform 0.5s ease;
+    background-image: url('https://assets-global.website-files.com/6334198f239547f2fccd84c1/64868917c44436f6a7595e4f_Work%20Background%20(1)-p-2000.jpg');
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg9{
+    transition: transform 0.5s ease;
+    background-image: url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/63ede953b6b5f3582560753a_Work%20Background-p-2000.jpg);
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg10{
+    transition: transform 0.5s ease;
+    background-image: url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/63529a2191211c3ebc67e4b7_Remind%20bg.png);
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+
+.bg11{
+    transition: transform 0.5s ease;
+    background-image: url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/635299c0532977f3221f06f5_Summon%20bg-p-2000.png);
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg12{
+    transition: transform 0.5s ease;
+    background-image: url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/637e6790db842e13a0e0aa51_Work-Background-p-2000.png);
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg13{
+    transition: transform 0.5s ease;
+    background-image: black;
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+.bg14{
+    transition: transform 0.5s ease;
+    background-image: url(https://assets-global.website-files.com/6334198f239547f2fccd84c1/63529a2b9a478df1ef5a0435_Haufe.de%20bg-p-1600.png);
+    transition: transform   0.5s ease;
+    transform: scale(1);
+}
+
+.text_wrapper {
+    font-size: 3em;
+    font-weight: 500;
+    letter-spacing: -.01em;
+}
+
+.flex_right {
+    width: 325px;
+    height: 162.5px;
+    margin-right: 5em;
+
+}
+
+.para {
+    width: 100%;
+    height: max-content;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.15em;
+    line-height: 1.5;
+
+}
+
+.hovered .onHover {
+    transform: scale(1);
+}
+
+.onHover {
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    transform-origin: center;
+    width: 500px;
+}
+
+
+
+
+.btn {
+    background-color: white;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 31.25rem;
+    padding: .5rem 1.125rem;
+    line-height: 1.3;
+    text-decoration: none;
+    overflow: hidden;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_wrapper a {
+    text-decoration: none;
+}
+
+.btn_wrapper a .btn .c_button_icon {
+    margin-left: .5em;
+}
