@@ -2,6 +2,7 @@ import React from 'react'
 import Recommended from './Recommended';
 import SideBar from './SideBar';
 import Products from './Products';
+import Cards from './Cards';
 
 export default function Main() {
     return (
@@ -11,9 +12,9 @@ export default function Main() {
                     <div className="col-2">
                     <SideBar/>
                     </div>
-                    <div className="col-10">
+                    <div className="col-10 d-flex flex-wrap">
                         <Recommended />
-                        <Products />
+                        <Products/>
                     </div>
                 </div>
             </div>

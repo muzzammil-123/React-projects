@@ -7,6 +7,7 @@ import { FaUserAlt } from "react-icons/fa";
 import Nav from './components/Nav';
 import { IoStarSharp } from "react-icons/io5";
 import Main from './components/Main';
+// import {Link}    from "react-router-dom";
 
 export default function App() {
 

@@ -68,6 +68,37 @@ export default function SideBar() {
                   $600 - $700
                 </label>
               </div>
+              <h2>Colors</h2>
+              <div className="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label style={{width : 'max-content'}} className="form-check-label" htmlFor="flexRadioDefault1">
+                  All
+                </label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label style={{width : 'max-content'}} className="form-check-label" htmlFor="flexRadioDefault1">
+                  Red
+                </label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label style={{width : 'max-content'}} className="form-check-label" htmlFor="flexRadioDefault1">
+                  Blue
+                </label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label style={{width : 'max-content'}} className="form-check-label" htmlFor="flexRadioDefault1">
+                  Orange
+                </label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label style={{width : 'max-content'}} className="form-check-label" htmlFor="flexRadioDefault1">
+                  Purple
+                </label>
+              </div>
             </div>
           </div>
         </div> 
