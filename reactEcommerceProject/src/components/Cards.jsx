@@ -1,24 +1,25 @@
-import React, { useContext, useEffect, useState } from 'react'
-import store from '../store/Store'
-import data from '../data'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { FaShoppingCart } from "react-icons/fa";
+import data from '../data'
+import store from '../store/Store';
+import { IoStarSharp } from 'react-icons/io5';
 export default function Cards() {
-  let { FaShoppingCart, IoStarSharp, search } = useContext(store)
-  let [products, setProducts] = useState([])
-  useEffect(() => {
-    setProducts(data)
-
-  }, [])
+  let { search, products } = useContext(store)
+ 
   return (
     <>
       {products.filter((item) => {
-        return (item.title.toLowerCase().includes(search.toLowerCase()) ||
-         item.category.toLowerCase().includes(search.toLowerCase()) || 
-         item.company.toLowerCase().includes(search.toLowerCase()))
+        return (
+          item.title.toLowerCase().includes(search.toLowerCase()) ||
+          item.company.toLowerCase().includes(search.toLowerCase()) ||
+          item.category.toLowerCase().includes(search.toLowerCase())
+        )
       }).map((item) => {
         return (
-          <Link to={`/product/${item.id}`} className="card mx-2 my-2" style={{ width: '18rem' }}>
-            <img src={item.img} className="card-img-top mx-auto my-3" alt="..." style={{ width: '250px', height: '150px' }} />
+
+          <Link to={`/product/${item.id}`} className="card customLink mx-2 my-2" style={{ width: '18rem' }}>
+            <img src={item.img} className="card-img-top mx-auto my-3 h-100 object-fit-contain" alt="..." style={{ width: '250px', height: '150px' }} />
             <div className="card-body">
               <h5 className="card-title">{item.title}</h5>
               <div className="pricing d-flex justify-content-between align-items-center pe-3">
@@ -40,18 +41,11 @@ export default function Cards() {
                 </div>
                 <div className='text-secondary fs-6'>{item.reviews}</div>
               </div>
-              <div className="pricing d-flex justify-content-between align-items-center pe-3">
-              <div>
-                <p>{item.category}</p>
-              </div>
-              <div>{item.company}</div>
-              </div>
               <a href="#" className="btn btn-primary d-block mt-3">Buy Now</a>
             </div>
           </Link>
         )
       })}
-
     </>
   )
 }

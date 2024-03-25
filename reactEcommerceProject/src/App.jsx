@@ -1,26 +1,41 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Store from './store/Store'
-import { FaShoppingCart } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
-import { FaUserAlt } from "react-icons/fa";
 import Nav from './components/Nav';
-import { IoStarSharp } from "react-icons/io5";
 import Main from './components/Main';
-// import {Link}    from "react-router-dom";
+import Routing from './utils/Routing';
+import { Route, Routes } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import data from './data';
 
 export default function App() {
   let [search, setSearch] = useState('')
-  let [company, setCompany] = useState('')
+
+  let [originalData] = useState(data)
+
+  let [products, setProducts] = useState(originalData)
+
+  let handleClick = (click) => {
+    let val = click
+    console.log(val)
+
+    if (val === `All products`) {
+      setProducts(data)
+    }else{
+      let filterData = originalData.filter((item)=>{
+        return item.category === val
+      })
+      setProducts(filterData)
+    }
+  }
 
 
   return (
 
-    <Store.Provider value={{ FaShoppingCart, FaHeart, FaUserAlt, IoStarSharp, setSearch, search, setCompany, company }}>
+    <Store.Provider value={{ Link, search, setSearch, Main, Route, Routes, handleClick, products }}>
       <>
         <Nav />
-       
-        <Main/>
+        <Routing />
 
       </>
     </Store.Provider>
