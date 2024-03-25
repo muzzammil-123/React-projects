@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Store from './store/Store'
 import { FaShoppingCart } from "react-icons/fa";
@@ -10,10 +10,13 @@ import Main from './components/Main';
 // import {Link}    from "react-router-dom";
 
 export default function App() {
+  let [search, setSearch] = useState('')
+  let [company, setCompany] = useState('')
+
 
   return (
 
-    <Store.Provider value={{ FaShoppingCart, FaHeart, FaUserAlt, IoStarSharp }}>
+    <Store.Provider value={{ FaShoppingCart, FaHeart, FaUserAlt, IoStarSharp, setSearch, search, setCompany, company }}>
       <>
         <Nav />
        
