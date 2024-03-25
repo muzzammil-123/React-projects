@@ -19,20 +19,31 @@ export default function App() {
     let val = click
     console.log(val)
 
-    if (val === `All products`) {
+    if (val === `All products` || val === `All`) {
       setProducts(data)
     }else{
       let filterData = originalData.filter((item)=>{
-        return item.category === val
+        return item.category === val || item.color === val
       })
       setProducts(filterData)
     }
   }
 
-
+  let filterOut = (e) => {
+    let val = e
+    if (val === `All products`) {
+      setProducts(data)
+    } else {
+      let filterData = originalData.filter((item) => {
+        return item.company === val
+      })
+      setProducts(filterData)
+    }
+  }
+  
   return (
 
-    <Store.Provider value={{ Link, search, setSearch, Main, Route, Routes, handleClick, products }}>
+    <Store.Provider value={{filterOut, Link, search, setSearch, Main, Route, Routes, handleClick, products }}>
       <>
         <Nav />
         <Routing />

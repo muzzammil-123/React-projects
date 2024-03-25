@@ -117,7 +117,7 @@ const data = [
     {
         id: 10,
         img: "https://m.media-amazon.com/images/I/81xXDjojYKS._AC_UX575_.jpg",
-        title: "PUMA BLACK-OCE",
+        title: "Puma BLACK-OCE",
 
         reviews: "(123 reviews)",
         prevPrice: "$140,00",
@@ -255,7 +255,7 @@ const data = [
         reviews: "(123 reviews)",
         prevPrice: "$140,00",
         newPrice: "100",
-        company: "puma",
+        company: "Puma",
         color: "black",
         category: "heels",
     },

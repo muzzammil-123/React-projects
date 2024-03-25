@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import store from '../store/Store'
 
 export default function Recommended() {
+let {filterOut} = useContext(store)
     return (
         <>
             <div className="container">
@@ -10,11 +12,11 @@ export default function Recommended() {
                             Recommended
                         </h2>
                         <div className="button mt-2">
-                            <button className="btn btn-outline-secondary mx-2">All products</button>
-                            <button className="btn btn-outline-secondary mx-2">Nike</button>
-                            <button className="btn btn-outline-secondary mx-2">Addidas</button>
-                            <button className="btn btn-outline-secondary mx-2">Pumal</button>
-                            <button className="btn btn-outline-secondary mx-2">Vans</button>
+                            <button onClick={(e)=>filterOut(e.target.textContent)}  className="btn btn-outline-secondary mx-2">All products</button>
+                            <button onClick={(e)=>filterOut(e.target.textContent)} className="btn btn-outline-secondary mx-2">Nike</button>
+                            <button onClick={(e)=>filterOut(e.target.textContent)} className="btn btn-outline-secondary mx-2">Adidas</button>
+                            <button onClick={(e)=>filterOut(e.target.textContent)} className="btn btn-outline-secondary mx-2">Puma</button>
+                            <button onClick={(e)=>filterOut(e.target.textContent)} className="btn btn-outline-secondary mx-2">Vans</button>
                         </div>
                     </div>
                 </div>

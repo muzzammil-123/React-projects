@@ -80,27 +80,33 @@ export default function SideBar() {
               </label>
             </div>
             <div className="form-check">
-              <input onClick={(e) => { handleClick(e.target.value) }} value='Red' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+              <input onClick={(e) => { handleClick(e.target.value) }} value='red' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
               <label style={{ width: 'max-content' }} className="form-check-label" htmlFor="flexRadioDefault1">
                 Red
               </label>
             </div>
             <div className="form-check">
-              <input onClick={(e) => { handleClick(e.target.value) }} value='Blue' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+              <input onClick={(e) => { handleClick(e.target.value) }} value='blue' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
               <label style={{ width: 'max-content' }} className="form-check-label" htmlFor="flexRadioDefault1">
                 Blue
               </label>
             </div>
             <div className="form-check">
-              <input onClick={(e) => { handleClick(e.target.value) }} value='Orange' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+              <input onClick={(e) => { handleClick(e.target.value) }} value='white' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
               <label style={{ width: 'max-content' }} className="form-check-label" htmlFor="flexRadioDefault1">
-                Orange
+                White
               </label>
             </div>
             <div className="form-check">
-              <input onClick={(e) => { handleClick(e.target.value) }} value='Purple' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+              <input onClick={(e) => { handleClick(e.target.value) }} value='green' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
               <label style={{ width: 'max-content' }} className="form-check-label" htmlFor="flexRadioDefault1">
-                Purple
+                Green
+              </label>
+            </div>
+            <div className="form-check">
+              <input onClick={(e) => { handleClick(e.target.value) }} value='black' className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+              <label style={{ width: 'max-content' }} className="form-check-label" htmlFor="flexRadioDefault1">
+                Black
               </label>
             </div>
           </div>
