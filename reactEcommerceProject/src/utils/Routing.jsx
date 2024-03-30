@@ -11,8 +11,8 @@ export default function Routing() {
      <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/product/:id' element={<Products_Details />} />
-        <Route path='/cart/:id' element={<Cart/>}/> 
         <Route path='/wishlist/:id' element={<Wishlist/>}/> 
+        <Route path='/cart' element={<Cart/>}/>
         </Routes> 
     </>
   )

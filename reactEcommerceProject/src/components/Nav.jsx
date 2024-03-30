@@ -5,8 +5,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link, useParams } from 'react-router-dom';
 import { FaHeart } from "react-icons/fa6";
 export default function Nav() {
-  let {id} = useParams()
-  let { setSearch } = useContext(store)
+  let { id } = useParams()
+  let { setSearch, cart } = useContext(store)
   return (
     <>
       <nav className="navbar bg-body-tertiary mt-3 px-5">
@@ -18,8 +18,16 @@ export default function Nav() {
           </form>
           <div>
             <Link to='/cart' className='me-2'>
-              <FaShoppingCart />
-              </Link>
+              <button type="button" className="btn btn-primary bg-transparent border-0 text-black position-relative">
+                <FaShoppingCart />
+                {cart.length === 0 ? null : <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {cart.length}
+                  <span className="visually-hidden">unread messages</span>
+                </span>}
+
+              </button>
+
+            </Link>
             <Link className='text-danger'><FaHeart /></Link>
           </div>
         </div>

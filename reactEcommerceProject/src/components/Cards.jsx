@@ -5,7 +5,7 @@ import data from '../data'
 import store from '../store/Store';
 import { IoStarSharp } from 'react-icons/io5';
 export default function Cards() {
-  let { search, products } = useContext(store)
+  let { search, products, addToCart } = useContext(store)
  
   return (
     <>

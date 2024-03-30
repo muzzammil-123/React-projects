@@ -10,11 +10,8 @@ import data from './data';
 
 export default function App() {
   let [search, setSearch] = useState('')
-
   let [originalData] = useState(data)
-
   let [products, setProducts] = useState(originalData)
-
   let handleClick = (click) => {
     let val = click
     console.log(val)
@@ -40,10 +37,18 @@ export default function App() {
       setProducts(filterData)
     }
   }
+
+  let [cart, setCart] = useState([])
+  let addToCart = (product)=>{
+    let newCart = [...cart, product]
+    setCart(newCart)
+    console.log(newCart)
+    console.log(`aaaa`)
+  }
   
   return (
 
-    <Store.Provider value={{filterOut, Link, search, setSearch, Main, Route, Routes, handleClick, products }}>
+    <Store.Provider value={{filterOut, Link, search, setSearch, cart, Main, Route, Routes, handleClick, products, addToCart }}>
       <>
         <Nav />
         <Routing />

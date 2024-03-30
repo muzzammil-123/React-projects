@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import data from '../data'
 import { IoStarSharp } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
+import store from '../store/Store';
 
 export default function Products_Details() {
     let { id } = useParams()
+    let { addToCart } = useContext(store)
     return (
         <>
 
@@ -40,12 +42,10 @@ export default function Products_Details() {
                                     </div>
                                     <p>{item.description}</p>
                                     <div>
-                                        <Link to={`/cart/${item.id}`}>
-                                            <button className="btn btn-outline-danger w-25">Add to cart <FaShoppingCart className="ms-4" /></button>
 
-                                        </Link>
+                                        <button onClick={() => addToCart(item)} className="btn btn-outline-danger w-25">Add to cart <FaShoppingCart className="ms-4" /></button>
                                         <Link to={`/wishlist/${item.id}`}>
-                                        <button className="btn btn-outline-success ms-3 w-25">Buy Now</button>
+                                            <button className="btn btn-outline-success ms-3 w-25">Buy Now</button>
                                         </Link>
                                     </div>
                                 </div>
