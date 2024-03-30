@@ -4,7 +4,6 @@ import Header from './Header'
 export default function Login() {
     return (
         <>
-        <Header/>
             <Container>
                 <Content>
                     <CTA>
@@ -30,7 +29,7 @@ height: 100vh;
 `
 
 const Content = styled.div`
-margin-bottom: 10vw
+margin-bottom: 10vw;
 width : 100%;
 position: relative;
 min-height: 100vh;
@@ -40,7 +39,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 padding: 80px 40px;
-heihgt: 100%;
+height: 100%;
 `
 
 let BgImage = styled.div`

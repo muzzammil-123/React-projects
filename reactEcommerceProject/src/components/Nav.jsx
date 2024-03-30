@@ -18,15 +18,15 @@ export default function Nav() {
           </form>
           <div>
             <Link to='/cart' className='me-2'>
-              <button type="button" className="btn btn-primary bg-transparent border-0 text-black position-relative">
+              <button type="button" class="border-0  position-relative">
                 <FaShoppingCart />
-                {cart.length === 0 ? null : <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {cart.length === 0 ? `` : 
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {cart.length}
-                  <span className="visually-hidden">unread messages</span>
-                </span>}
-
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+                }
               </button>
-
             </Link>
             <Link className='text-danger'><FaHeart /></Link>
           </div>

@@ -46,9 +46,16 @@ export default function App() {
     console.log(`aaaa`)
   }
   
+  let [cart, setCart] = useState([])
+  let addToCart = (product) =>{
+    let arrayCart = [...cart, product]
+    setCart(arrayCart)
+    console.log(cart)
+  }
+
   return (
 
-    <Store.Provider value={{filterOut, Link, search, setSearch, cart, Main, Route, Routes, handleClick, products, addToCart }}>
+    <Store.Provider value={{filterOut, Link, search, setSearch, Main, Route, Routes, handleClick, products, addToCart, cart }}>
       <>
         <Nav />
         <Routing />
