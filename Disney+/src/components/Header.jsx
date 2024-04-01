@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { auth, provider } from '../firebase' // Ensure these imports are correct
 import { signInWithPopup } from 'firebase/auth' // Ensure this import is correct
-import Home from './Home'
 
 export default function Header() {
 
@@ -126,7 +125,7 @@ let NavMenu = styled.div`
 align-items: center;
 display: flex;
 flex-flow: row nowrap;
-height: 100%
+height: 100%;
 justify-content: flex-end;
 margin:0;
 padding:0;
@@ -146,7 +145,7 @@ a{
   }
 
   span{
-    color: rgb(249, 249 249)
+    color: rgb(249, 249 249);
     font-size:13px;
     letter-spacing:1.42px;
     line-height: 1.08;
@@ -182,7 +181,7 @@ a{
 }
   
 @media(max-width: 768px){
-  display:none
+  display:none;
 }
 `
 
