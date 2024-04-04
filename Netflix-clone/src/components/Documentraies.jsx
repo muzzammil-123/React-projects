@@ -1,28 +1,19 @@
-import axios from '../Axios'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import Data from '../Documentraies'
 import styled from 'styled-components'
-import  { NavLink } from 'react-router-dom'
-import Youtube from 'react-youtube'
-export default function Row({ title, fetchUrl, movieDetail }) {
-  const baseUrl = "https://image.tmdb.org/t/p/original/"
-  const [movies, setMovies] = useState([])
-
-  useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(fetchUrl)
-      setMovies(request.data.results)
-      return request
-    }
-    fetchData()
-  }, [])
-
-  console.log(movies)
+// import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+export default function Documentraies({movieDetail}) {
+    let [originalData] = useState(Data)
+    let [movie, setMovie] = useState(originalData)
+    const baseUrl = "https://image.tmdb.org/t/p/original/"
+    console.log(movie)
   return (
     <>
-      <div className="row">
-        <Title style={{ background: 'transparent' }}>{title}</Title>
+         <div className="row">
+        <Title style={{ background: 'transparent' }}>Documentraies</Title>
         <RowPoster>
-          {movies.map((movies) => {
+          {movie.map((movies) => {
             return (
               <NavLink className='wrapper' to={`/movie/${movies.id}`} key={movies.id}>
                 <RowPosters key={movies.id} onClick={() => { movieDetail(movies) }} src={`${baseUrl}${movies.poster_path}`} alt={movies.name} />
@@ -34,6 +25,8 @@ export default function Row({ title, fetchUrl, movieDetail }) {
     </>
   )
 }
+
+
 
 let Title = styled.h2`
 /* background: transparent !important; */

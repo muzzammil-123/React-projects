@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useParams } from 'react-router'
 import YouTube from 'react-youtube'
 import movieTrailer from 'movie-trailer'
-export default function Details({ page }) {
+export default function Details({ page, play, handleTrailer, trailerUrl }) {
     let baseUrl = "https://image.tmdb.org/t/p/original/"
     let { id } = useParams()
 
@@ -13,23 +13,6 @@ export default function Details({ page }) {
     });
 
     console.log(filteredArray)
-
-    const [trailerUrl, setTrailerUrl] = useState('');
-
-    const handleTrailer = (movie) => {
-        if (trailerUrl) {
-            setTrailerUrl('');
-        } else {
-            movieTrailer(movie?.name || '', { id: true })
-                .then((url) => {
-                    setTrailerUrl(url);
-                })
-                .catch((err) => {
-                    console.log(err);
-                    setTrailerUrl(''); // Reset trailerUrl in case of error
-                });
-        }
-    };
 
     return (
         <>
@@ -70,7 +53,7 @@ export default function Details({ page }) {
                                 {item.overview}
                             </Description>
                         </ContentMeta>
-                        {trailerUrl && <YouTube videoId={trailerUrl} />}
+                        {play && <iframe width="1000" height="500" style={{marginLeft: '15rem'}} src={item.youtube_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>}
                     </Container>
                 )
             })}
