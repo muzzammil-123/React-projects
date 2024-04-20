@@ -45,13 +45,6 @@ export default function App() {
     console.log(newCart)
     console.log(`aaaa`)
   }
-  
-  let [cart, setCart] = useState([])
-  let addToCart = (product) =>{
-    let arrayCart = [...cart, product]
-    setCart(arrayCart)
-    console.log(cart)
-  }
 
   return (
 
