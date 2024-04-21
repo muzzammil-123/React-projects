@@ -9,25 +9,25 @@ import store from '../store/Store'
 export default function Trending() {
     let [originalData] = useState(data)
     let [database, setDatabase] = useState(originalData)
-    let { baseUrl ,search } = useContext(store)
+    let { baseUrl, search } = useContext(store)
     console.log(originalData)
     return (
         <>
             <Container>
                 <Content>
-                    <SearchBar/>
+                    <SearchBar />
                     <TrendingMovie>
-                        {database.filter((item)=>{
-                            return search==item.title
-                        })
-                        .map((item ,index) => {
+                        {database.filter((item) => {
+                            return item.title.toLowerCase().includes(search.toLowerCase());
+                        }).map((item, index) => {
                             return (
                                 <Wrapper key={index}>
                                     <CardImage><img src={`${baseUrl}${item.poster_path}`} alt="" /></CardImage>
                                     <CardTitle>{item.title}</CardTitle>
                                 </Wrapper>
-                            )
+                            );
                         })}
+
                     </TrendingMovie>
                 </Content>
             </Container>
