@@ -14,7 +14,7 @@ export default function Nav() {
                         <NewFeed>
                             <Title>New Feeds</Title>
                             <Wrap>
-                                <Items>
+                                <Items href='/trending'>
                                     <div>
                                         <FaFireFlameCurved />
                                     </div>
@@ -22,7 +22,7 @@ export default function Nav() {
                                 </Items>
                             </Wrap>
                             <Wrap>
-                                <Items>
+                                <Items href='/popular'>
                                     <div>
                                         <img src="/star.svg" alt="" />
                                     </div>
@@ -30,7 +30,7 @@ export default function Nav() {
                                 </Items>
                             </Wrap>
                             <Wrap>
-                                <Items>
+                                <Items href='/movie'>
                                     <div>
                                         <img src="/movie.svg" alt="" />
                                     </div>
@@ -39,7 +39,7 @@ export default function Nav() {
 
                             </Wrap>
                             <Wrap>
-                                <Items>
+                                <Items href='/tv'>
                                     <div>
                                         <img src="/tv.svg" alt="" />
                                     </div>
@@ -101,7 +101,8 @@ height: 100%;
 }
 `
 
-let Items = styled.div`
+let Items = styled.a`
+text-decoration: none;
 padding:20px;
 color: #626169;
 display: flex;

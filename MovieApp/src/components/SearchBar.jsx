@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import store from "../store/Store";
 export default function SearchBar() {
+  let {onChange} = useContext(store)
   return (
     <>
       <Container>
         <Icon>
           <img src="/search.svg" alt="" />
         </Icon>
-        <input type="text" placeholder="Search" />
+        <input type="text" onChange={(e) => onChange(e.target.value)} placeholder="Search" />
       </Container>
     </>
   );
