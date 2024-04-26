@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import Trending from '../Trending'
 import store from '../store/Store'
+import { Link } from 'react-router-dom'
 export default function ImgSlider() {
     let [data] = useState(Trending)
     let { baseUrl } = useContext(store)
@@ -14,7 +15,7 @@ export default function ImgSlider() {
         speed: 500,
         slideToShow: 1,
         slideToScoll: 1,
-        autoplay: true
+        autoplay: false
     }
     return (
         <>
@@ -24,7 +25,7 @@ export default function ImgSlider() {
                 {data.map((item, index) => {
                     return (
                         <Wrap key={index}>
-                            <a href="#">
+                            <Link to={`/movie/${item.id}`}>
                                 <img src={`${baseUrl}${item.backdrop_path}`} alt="" />
                                 <Description>
                                     <p>{item.title}</p>
@@ -41,7 +42,7 @@ export default function ImgSlider() {
                                 
                                 </Description>
                                 <GradientOverlay />
-                            </a>
+                            </Link>
                         </Wrap>
                     )
                 })}
@@ -108,6 +109,7 @@ const GradientOverlay = styled.div`
 let Wrap = styled.div`
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
     position: relative; /* Ensure proper positioning for z-index to work */
     overflow: hidden; /* Ensure child elements don't overflow */
     /* height: 100%; */
