@@ -46,11 +46,28 @@ export default function Nav() {
                                     <div>Tv Shows</div>
                                 </Items>
                             </Wrap>
+                            <Wrap className='b-bottom'>
+                                <Items>
+                                    <div>
+                                        <img src="/people.svg" alt="" />
+                                    </div>
+                                    <div>People</div>
+                                </Items>
+
+                            </Wrap>
+                            <Wrap>
+                                <Items>
+                                    <div className='heading'>
+                                        Website Information
+                                    </div>
+                                </Items>
+
+                            </Wrap>
                             <Wrap>
                                 <Items>
                                     <div>
                                         <img src="/people.svg" alt="" />
-                                        </div>
+                                    </div>
                                     <div>People</div>
                                 </Items>
 

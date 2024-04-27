@@ -1,73 +1,71 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import styled from 'styled-components';
 
 export default function DropDown() {
-    let [dropDown, setDropDown] = useState(false);
-    let Toggle = () =>{
-        if(dropDown){
-            setDropDown(false)
-        }else{
-            setDropDown(true)
-        }
-    }
-  return (
-    <>
-       <Dropdown>
-                <Wrap onClick={()=>{Toggle()}}>
+    const [dropDown, setDropDown] = useState(false);
+
+    const toggleDropDown = () => {
+        setDropDown(!dropDown);
+    };
+
+    return (
+        <>
+            <Dropdown>
+                <Wrap onClick={toggleDropDown}>
                     <FilterName>Filter</FilterName>
                     <Icon><IoIosArrowDown/></Icon>
                 </Wrap>
-                {dropDown ? 
-                <DropdownMenu>
+                <DropdownMenu isOpen={dropDown}>
                     <Item>All</Item>
                     <Item>Movie</Item>
                     <Item>TV</Item>
-                </DropdownMenu> :
-                null
-                }
-            </Dropdown> 
-    </>
-  )
+                </DropdownMenu>
+            </Dropdown>
+        </>
+    );
 }
 
-
-let Dropdown = styled.div`
-overflow: hidden;
-width: 350px;
-background-color: #00000037;
+const Dropdown = styled.div`
+    overflow: hidden;
+    position: relative;
+    width: 350px;
+    background-color: #00000037;
 `;
 
-let Wrap = styled.div`
-width: 100%;
-display: flex;
-padding: .5rem 1rem;
-justify-content: space-between;
-align-items: center;
-/* border: 2px solid white; */
-`
+const Wrap = styled.div`
+    width: 100%;
+    display: flex;
+    padding: .5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+`;
 
-let FilterName = styled.div`
-color: white;
-font-size: 1.2rem;
-`
+const FilterName = styled.div`
+    color: white;
+    font-size: 1.2rem;
+`;
 
-let Icon = styled.div`
+const Icon = styled.div`
     width: 30px;
     color: white;
-`
-let DropdownMenu = styled.div`
-width: 100%;
-display: flex;
-flex-direction: column;
+`;
 
-`
+const DropdownMenu = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.3s ease-in-out;
+    max-height: ${props => (props.isOpen ? '200px' : '0px')};
+    overflow: hidden;
+`;
 
-let Item = styled.div`
+const Item = styled.div`
     padding: .9rem 1.5rem;
     color: white;
-    border-radius:10px;
-    &:hover{
+    overflow: hidden;   
+    border-radius: 10px;
+    &:hover {
         background-color: #6556cd;
     }
-`
+`;

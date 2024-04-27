@@ -16,6 +16,7 @@ export default function TrendingSlider() {
 }
 
 let Container = styled.div`
+    position: relative;
     width: 100%;
 
 `

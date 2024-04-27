@@ -13,3 +13,14 @@ body{
 
   background-color: #1f1e24;
 }
+
+.b-bottom{
+  border-bottom: 2px solid white;
+}
+
+.heading{
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  width: max-content;
+}

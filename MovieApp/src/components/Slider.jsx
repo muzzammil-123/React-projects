@@ -12,10 +12,10 @@ export default function ImgSlider() {
     let setting = {
         // dots: true,
         infinite: true,
-        speed: 500,
+        speed: 400,
         slideToShow: 1,
         slideToScoll: 1,
-        autoplay: false
+        autoplay: true
     }
     return (
         <>
