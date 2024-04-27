@@ -63,8 +63,8 @@ const DropdownMenu = styled.div`
 const Item = styled.div`
     padding: .9rem 1.5rem;
     color: white;
-    overflow: hidden;   
     border-radius: 10px;
+    overflow: hidden;   
     &:hover {
         background-color: #6556cd;
     }
