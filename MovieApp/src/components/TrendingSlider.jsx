@@ -16,6 +16,7 @@ export default function TrendingSlider() {
 }
 
 let Container = styled.div`
+z-index: 1000;
     position: relative;
     width: 100%;
 
