@@ -1,6 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import styled from "styled-components";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 import store from "../store/Store";
 import data from "../AllMovie";
 import { Link } from "react-router-dom";
@@ -12,6 +15,17 @@ export default function AllMovies() {
   let filterResult = database.filter((item) => {
     return item.title.toLowerCase().includes(search.toLowerCase());
   });
+
+
+
+  let [skeleton, setSkeleton] = useState(true)
+
+  useEffect(() => {
+    let timeout = setTimeout(() => {
+      setSkeleton(false)
+    }, 2000)
+    return () => clearTimeout(timeout);
+  })
   return (
     <>
       <Container>
@@ -20,25 +34,38 @@ export default function AllMovies() {
           <Movie>
             {filterResult.length === 0 ? (
               <Message>Try another Keyword</Message>
-            ) : (
-              filterResult.map((item, index) => {
-                return (
-                  <Wrapper key={index}>
-                    <Link to={`/movie/${item.id}`}>
-                      <CardImage>
-                        <img src={`${baseUrl}${item.poster_path}`} alt="" />
-                      </CardImage>
-                      <CardTitle>
-                        {" "}
-                        {item.title.length > 12
-                          ? `${item.title.slice(0, 13)}...`
-                          : item.title}
-                      </CardTitle>
-                    </Link>
-                  </Wrapper>
-                );
-              })
-            )}
+            ) :
+              skeleton ? (
+                database.map((item, index) => {
+                  return (
+                    <Box key={index}>
+                      <Skeleton animation="wave" direction="1rt" baseColor="#000" count={1} width={195} height={200} />
+                    </Box>
+                  )
+                })
+              ) :
+
+                database
+                  .filter((item) => {
+                    return item.title.toLowerCase().includes(search.toLowerCase());
+                  })
+                  .map((item, index) => {
+                    return (
+                      <Wrapper key={index}>
+                        <Link to={`/movie/${item.id}`}>
+                          <CardImage>
+                            <img src={`${baseUrl}${item.poster_path}`} alt="" />
+                          </CardImage>
+                          <CardTitle>
+                            {" "}
+                            {item.title.length > 12
+                              ? `${item.title.slice(0, 13)}...`
+                              : item.title}
+                          </CardTitle>
+                        </Link>
+                      </Wrapper>
+                    );
+                  })}
           </Movie>
         </Content>
       </Container>
@@ -104,3 +131,7 @@ let CardTitle = styled.div`
   overflow: hidden; /* Hide overflow */
   text-overflow: ellipsis; /* Show ellipsis for overflow text */
 `;
+
+let Box = styled.div`
+  padding: 0px 0px 0px 30px;
+`

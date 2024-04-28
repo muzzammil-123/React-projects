@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import styled from 'styled-components';
+import store from '../store/Store';
 
 export default function DropDown() {
     const [dropDown, setDropDown] = useState(false);
+    let {FilterName} = useContext(store);
 
     const toggleDropDown = () => {
         setDropDown(!dropDown);
     };
 
+    
+
     return (
         <>
             <Dropdown>
-                <Wrap onClick={toggleDropDown}>
-                    <FilterName>Filter</FilterName>
-                    <Icon><IoIosArrowDown/></Icon>
-                </Wrap>
-                <DropdownMenu isOpen={dropDown}>
-                    <Item>All</Item>
-                    <Item>Movie</Item>
-                    <Item>TV</Item>
-                </DropdownMenu>
+                <select onChange={(e)=>{FilterName(e)}} isOpen={dropDown}>
+                    <option value='All'>All</option>
+                    <option value='Movie'>Movie</option>
+                    <option value='TV'>TV</option>
+                </select>
             </Dropdown>
         </>
     );

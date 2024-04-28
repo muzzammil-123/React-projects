@@ -9,6 +9,7 @@ export default function App() {
   const baseUrl = "https://image.tmdb.org/t/p/original/";
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  let value;
 
   const onChange = (e) => {
     setSearch(e);
@@ -22,8 +23,14 @@ export default function App() {
     return () => clearTimeout(timeout);
   }, []); // Run only once on component mount
 
+  let FilterName = (e)=>{
+        value = e.target.value
+        console.log(value)
+
+  }
+
   return (
-    <Store.Provider value={{ baseUrl, onChange, search }}>
+    <Store.Provider value={{ baseUrl, FilterName, onChange, search }}>
       <Container>
         {isLoading ? (
           <Loader/>
