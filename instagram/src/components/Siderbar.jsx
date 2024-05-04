@@ -390,17 +390,17 @@ let Container = styled.div`
   overflow-y: hidden;
   position: relative;
   background-color: black;
-  border: 2px solid #262626;
 `;
 
 let Content = styled.div`
-  width: 100%;
+  width: 243px;
   height: 100%;
   padding: 35px 20px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
+  border-right: 2px solid #262626;
 `;
 
 let Logo = styled.div`
