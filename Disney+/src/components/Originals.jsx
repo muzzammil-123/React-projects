@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import data from '../disneyPlusMovieData'
 import store from '../store/Store'
 export default function Originals() {
-    let {detailsPage} = useContext(store)
+    let { detailsPage } = useContext(store)
     return (
         <>
 
@@ -16,7 +16,7 @@ export default function Originals() {
                     })
                         .map((item, index) => {
                             return (
-                                <Wrap onClick={()=>{detailsPage(item)}} key={index}>
+                                <Wrap onClick={() => { detailsPage(item) }} key={index}>
                                     {item.id}
                                     <Link to={`/details/${item.id}`}>
                                         <img src={item.cardImg} alt="" />
@@ -53,7 +53,7 @@ cursor: pointer;
 overflow: hidden;
 position: relative;
 transition: all 250ms cubic-bezier(0.25, 0.46,0.45,0.94) 0s;
-border: 3ps solid rgba(249, 249, 2491 0.1);
+border: 3px solid rgba(249, 249, 2491 0.1);
 
 img{
     inset: 0px;
